@@ -1,0 +1,23 @@
+@use '../abstracts' as *;
+
+html {
+    font-size: calc(1 * 100vw/375);
+    scroll-behavior: smooth;
+    line-height: 19/16;
+    font-family: var(--IM_Fell_Great_Primer);
+
+    @media screen and (min-width: 650px) {
+        font-size: calc(1 * 100vw/1440);
+    }
+
+    // @media screen and (min-width: 1640px) {
+    //     font-size: 1px;
+    // }
+}
+
+body {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden !important;
+    background: #1f001f;
+}
