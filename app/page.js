@@ -1,4 +1,12 @@
+"use client";
+
 import Image from 'next/image';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import styles from './page.module.scss';
 
 export default function Home() {
@@ -39,6 +47,38 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <Swiper
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          loop={true}
+          slidesPerView={'auto'}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+          }}
+          speed={500}
+          modules={[EffectCoverflow]}
+          className={styles.swiper__container}
+        >
+          <SwiperSlide className={styles.swiper__slide}>
+            <Image fill priority src="/images/1.jpg" alt="earthweapon" />
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiper__slide}>
+            <Image fill priority src="/images/2.jpg" alt="airphantom" />
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiper__slide}>
+            <Image fill priority src="/images/3.jpg" alt="fireartboard" />
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiper__slide}>
+            <Image fill priority src="/images/4.jpg" alt="earthphantom" />
+          </SwiperSlide>
+          <SwiperSlide className={styles.swiper__slide}>
+            <Image fill priority src="/images/5.jpg" alt="airweapon" />
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div className={styles.overlay} />
       <video

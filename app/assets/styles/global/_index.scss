@@ -9,10 +9,6 @@ html {
     @media screen and (min-width: 650px) {
         font-size: calc(1 * 100vw/1440);
     }
-
-    // @media screen and (min-width: 1640px) {
-    //     font-size: 1px;
-    // }
 }
 
 body {
@@ -20,4 +16,21 @@ body {
     height: 100%;
     overflow-x: hidden !important;
     background: #1f001f;
+}
+
+.swiper-slide-prev {
+    img {
+        transform: rotate(-15deg) translateX(50px) translateY(50px);
+    }
+}
+
+.swiper-slide-next {
+    img {
+        transform: rotate(15deg) translateX(-50px) translateY(50px);
+    }
+}
+
+.swiper-3d .swiper-slide-shadow-right,
+.swiper-3d .swiper-slide-shadow-left {
+    display: none !important;
 }
