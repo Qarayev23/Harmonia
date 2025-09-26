@@ -7,7 +7,7 @@ html {
     font-family: var(--IM_Fell_Great_Primer);
 
     @media screen and (min-width: 650px) {
-        font-size: calc(1 * 100vw/1440);
+        font-size: calc(1 * 100vw/1920);
     }
 }
 
@@ -34,3 +34,6 @@ body {
 .swiper-3d .swiper-slide-shadow-left {
     display: none !important;
 }
+
+.swiper { opacity: 0; transition: opacity .5s ease; }
+.swiper.swiper-initialized { opacity: 1; }

@@ -16,7 +16,7 @@ export default function Home() {
         <div className={styles.content}>
           <Image
             priority
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             width={620}
             height={300}
             alt="Harmonia"
@@ -59,7 +59,7 @@ export default function Home() {
             depth: 100,
             modifier: 2.5,
           }}
-          speed={500}
+          speed={400}
           modules={[EffectCoverflow]}
           className={styles.swiper__container}
         >
@@ -87,13 +87,9 @@ export default function Home() {
         loop
         muted
         playsInline
-        src="/images/video.MOV"
+        src="/images/video.mp4"
         type="video/mp4"
       />
-
-      <div className={styles.shape1} />
-      <div className={styles.shape2} />
-      <div className={styles.shape3} />
     </section>
   );
 }

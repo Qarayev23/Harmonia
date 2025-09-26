@@ -6,8 +6,10 @@
 
 .logo {
     object-fit: contain;
-    width: 600rem;
-    height: 240rem;
+    width: 570rem;
+    height: 280rem;
+    margin-top: 40rem;
+    margin-bottom: 13rem;
 }
 
 .content {
@@ -17,6 +19,7 @@
     overflow: hidden;
     position: relative;
     z-index: 1;
+    min-height: 100vh;
 }
 
 .description {
@@ -37,13 +40,13 @@
 .cards {
     display: flex;
     height: 386rem;
+    margin-top: auto;
 
     &__item {
         position: relative;
         top: 0;
         transition: 0.3s;
         cursor: pointer;
-        z-index: 1;
         border: 1rem solid #e6e6e6;
         border-radius: 24rem;
         box-shadow: 0px 4px 51.8px 3px #000000;
@@ -66,16 +69,17 @@
         }
 
         &:nth-of-type(3) {
-            z-index: 2;
+            z-index: 4;
         }
 
         &:nth-of-type(4) {
             transform: rotate(9deg) translateX(-55rem) translateY(60rem);
-            z-index: 1;
+            z-index: 3;
         }
 
         &:nth-of-type(5) {
             transform: rotate(15deg) translateX(-60rem) translateY(170rem);
+            z-index: 2;
         }
 
         &:nth-of-type(5),
@@ -107,55 +111,14 @@
     z-index: -1;
 }
 
-.shape1 {
-    width: 284rem;
-    height: 284rem;
-    border-radius: 50%;
-    background: #F1161E;
-    filter: blur(585rem);
-    box-shadow: 0 0 200px 100px #F1161E;
-    position: fixed;
-    left: -150rem;
-    top: -150rem;
-}
-
-.shape2 {
-    width: 285rem;
-    height: 285rem;
-    border-radius: 50%;
-    background: #F1161E;
-    filter: blur(787rem);
-    box-shadow:
-        0 0 300px 120px rgba(241, 22, 30, 0.7),
-        0 0 600px 250px rgba(241, 22, 30, 0.5),
-        0 0 900px 400px rgba(241, 22, 30, 0.3);
-    position: fixed;
-    right: -150rem;
-    top: -150rem;
-}
-
-.shape3 {
-    width: 372rem;
-    height: 372rem;
-    border-radius: 50%;
-    background: #F1161E;
-    filter: blur(586rem);
-    box-shadow:
-        0 0 350px 150px rgba(241, 22, 30, 0.7),
-        0 0 700px 300px rgba(241, 22, 30, 0.5),
-        0 0 1000px 500px rgba(241, 22, 30, 0.25);
-    position: fixed;
-    top: 241rem;
-    left: 1076rem;
-}
-
 .overlay {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 104rem;
-    z-index: 4;
+    z-index: 1;
+    pointer-events: none;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
 }
 
@@ -182,12 +145,31 @@
 }
 
 @media screen and (max-width: 650px) {
+    .container {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .content {
+        min-height: initial;
+    }
+
     .cards {
         display: none;
     }
 
     .swiper__container {
         display: block !important;
+    }
+
+    .logo {
+        object-fit: contain;
+        width: 275rem;
+        height: 140rem;
+        margin-top: 25rem;
+        margin-bottom: 20rem;
     }
 
     .description {
