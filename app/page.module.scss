@@ -120,6 +120,10 @@
     z-index: 1;
     pointer-events: none;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+
+    &.mob {
+        display: none;
+    }
 }
 
 .swiper__container {
@@ -145,11 +149,16 @@
 }
 
 @media screen and (max-width: 650px) {
+    .section {
+        height: 100%;
+    }
+
     .container {
-        min-height: 100vh;
+        min-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
     }
 
     .content {
@@ -187,5 +196,13 @@
 
     .overlay {
         height: 50rem;
+
+        &.mob {
+            display: block;
+        }
+
+        &.desk {
+            display: none;
+        }
     }
 }

@@ -16,6 +16,8 @@ export default function Home() {
         <div className={styles.content}>
           <Image
             priority
+            loading='eager'
+            fetchPriority='high'
             src="/images/logo.png"
             width={620}
             height={300}
@@ -31,19 +33,19 @@ export default function Home() {
           </svg>
           <div className={styles.cards}>
             <div className={styles.cards__item}>
-              <Image priority src="/images/1.jpg" fill alt="earthweapon" />
+              <Image priority loading='eager' fetchPriority='high' src="/images/1.jpg" fill alt="earthweapon" />
             </div>
             <div className={styles.cards__item}>
-              <Image priority src="/images/2.jpg" fill alt="airphantom" />
+              <Image priority loading='eager' fetchPriority='high' src="/images/2.jpg" fill alt="airphantom" />
             </div>
             <div className={styles.cards__item}>
-              <Image priority src="/images/3.jpg" fill alt="fireartboard" />
+              <Image priority loading='eager' fetchPriority='high' src="/images/3.jpg" fill alt="fireartboard" />
             </div>
             <div className={styles.cards__item}>
-              <Image priority src="/images/4.jpg" fill alt="earthphantom" />
+              <Image priority loading='eager' fetchPriority='high' src="/images/4.jpg" fill alt="earthphantom" />
             </div>
             <div className={styles.cards__item}>
-              <Image priority src="/images/5.jpg" fill alt="airweapon" />
+              <Image priority loading='eager' fetchPriority='high' src="/images/5.jpg" fill alt="airweapon" />
             </div>
           </div>
         </div>
@@ -64,23 +66,24 @@ export default function Home() {
           className={styles.swiper__container}
         >
           <SwiperSlide className={styles.swiper__slide}>
-            <Image fill priority src="/images/1.jpg" alt="earthweapon" />
+            <Image fill priority loading='eager' fetchPriority='high' src="/images/1.jpg" alt="earthweapon" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiper__slide}>
-            <Image fill priority src="/images/2.jpg" alt="airphantom" />
+            <Image fill priority loading='eager' fetchPriority='high' src="/images/2.jpg" alt="airphantom" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiper__slide}>
-            <Image fill priority src="/images/3.jpg" alt="fireartboard" />
+            <Image fill priority loading='eager' fetchPriority='high' src="/images/3.jpg" alt="fireartboard" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiper__slide}>
-            <Image fill priority src="/images/4.jpg" alt="earthphantom" />
+            <Image fill priority loading='eager' fetchPriority='high' src="/images/4.jpg" alt="earthphantom" />
           </SwiperSlide>
           <SwiperSlide className={styles.swiper__slide}>
-            <Image fill priority src="/images/5.jpg" alt="airweapon" />
+            <Image fill priority loading='eager' fetchPriority='high' src="/images/5.jpg" alt="airweapon" />
           </SwiperSlide>
         </Swiper>
+        <div className={`${styles.overlay} ${styles.mob}`} />
       </div>
-      <div className={styles.overlay} />
+      <div className={`${styles.overlay} ${styles.desk}`} />
       <video
         className={styles.video}
         autoPlay

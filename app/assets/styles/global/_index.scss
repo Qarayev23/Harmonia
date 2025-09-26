@@ -5,6 +5,7 @@ html {
     scroll-behavior: smooth;
     line-height: 19/16;
     font-family: var(--IM_Fell_Great_Primer);
+    height: 100%;
 
     @media screen and (min-width: 650px) {
         font-size: calc(1 * 100vw/1920);
@@ -15,7 +16,6 @@ body {
     position: relative;
     height: 100%;
     overflow-x: hidden !important;
-    background: #1f001f;
 }
 
 .swiper-slide-prev {
